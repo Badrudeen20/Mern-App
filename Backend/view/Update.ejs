@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+.form-group{
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label{
+     font-size: 20px;
+     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.form-group input,.form-group select,.form-group textarea{
+     padding: 10px;
+     border-radius: 4px;
+     border: 1px solid #333;
+     outline: none;
+     margin-top: 5px;
+}
+.form-group button{
+    margin-top: 10px;
+     padding: 10px;
+     border-radius: 3px;
+     border:none;
+     font-size: 20px;
+     background-color: rgb(81, 219, 243);
+    cursor: pointer;
+    color:cornsilk;
+}
+    </style>
+</head>
+<body>
+    
+<div class="container">
+   
+     
+     
+    <form action="/Update" method="POST">
+        <%if(data){ %>
+        <h2>Upload Movie</h2>
+        <div class="form-group">
+            <input type="hidden" name="id" 
+            value="<%=data.id%>"
+           class="form-control" placeholder="Movie id" required />
+        </div>
+        <div class="form-group">
+           <label>Movie Name</label>
+           <input type="text" name="name" 
+           value="<%=data.name%>"
+          class="form-control" placeholder="Movie Name" required />
+       </div>
+
+
+        <div class="form-group">
+            <label>Movie Image</label>
+            <input type="text" name="image" 
+            value="<%=data.image%>"
+             class="form-control" placeholder="Movie Image" required />
+       </div>
+
+
+
+       <div class="form-group">
+            <label>Movie MB</label>
+            <input type="text" name="mb"
+            value="<%=data.mb%>"
+            class="form-control" placeholder="Movie download Size in Mb" required />
+       </div>
+
+      
+
+       <div class="form-group">
+           <label>Movie category</label>
+           <select class="form-control" name="category" >
+             <option value="">--Please choose an option--</option>
+             <option value="Bollywood" <%=data.category==="Bollywood"? 'selected':'' %> >Bollywood</option>
+             <option value="Hollywood" <%=data.category==="Hollywood"? 'selected':'' %> >Hollywood</option>
+             <option value="South" <%=data.category==="South"? 'selected':'' %> >South Indian</option>
+             <option value="Dual Audio" <%=data.category==="Dual Audio"? 'selected':'' %> >Dual Audio</option>
+             <option value="WEB" <%=data.category==="WEB"? 'selected':'' %> >WEB series</option>
+             <option value="Animation" <%=data.category==="Animation"? 'selected':'' %>>Animation</option>
+             <option value="Pakistani" <%=data.category==="Pakistani"? 'selected':'' %> >Pakistani Movie</option>
+             <option value="Punjabi" <%=data.category==="Punjabi"? 'selected':'' %> >Punjabi Movie</option>
+             <option value="TV show" <%=data.category==="TV show"? 'selected':'' %> >TV show</option>
+             <option value="Telugu" <%=data.category==="Telugu"? 'selected':'' %> >Telugu</option>
+          </select>
+       </div>
+
+        <div class="form-group">
+             <label>Movie rating</label>
+             <input type="text" name="rating"
+             value="<%=data.rating%>"
+            class="form-control" placeholder="Movie rating" required />
+        </div>
+
+    
+        <div class="form-group">
+             <label>Movie Genres</label>
+               <input type="text" name="genres"
+               value="<%=data.genres%>"
+               class="form-control" placeholder="Movie Genres" required />
+       </div>
+
+
+       
+       <div class="form-group">
+           <label>Movie Director</label>
+             <input type="text" name="director"
+             value="<%=data.director%>"
+               class="form-control" placeholder="Movie director" required />
+       </div>
+        
+
+
+       
+       <div class="form-group">
+           <label>Movie cast</label>
+             <input type="text" name="cast"
+             value="<%=data.cast%>"
+               class="form-control" placeholder="Movie cast" required />
+       </div>
+
+
+
+       
+       <div class="form-group">
+           <label>Movie Language</label>
+             <input type="text" name="language"
+             value="<%=data.language%>"
+               class="form-control" placeholder="Movie language" required />
+       </div>
+
+       
+
+       
+       <div class="form-group">
+           <label>Movie Quality</label>
+             <input type="text" name="quality"
+             value="<%=data.quality%>"
+               class="form-control" placeholder="Movie quality" required />
+       </div>
+
+      
+
+       <div class="form-group">
+           <label>Movie Story</label>
+             <textarea type="text" name="story"
+             rows="4" cols="80"
+               class="form-control" placeholder="Movie story" required><%=data.story%></textarea>
+       </div>
+
+ 
+
+       <div class="form-group">
+           <label>Movie Screemshot</label>
+             <input type="text" name="screenshot" 
+             value="<%=data.screenshot%>"
+               class="form-control" placeholder="Movie screenshot" required />
+       </div>
+    
+       <div class="form-group">
+            <label>Watch Online</label>
+            <input type="text" name="watchonline"
+            class="form-control" 
+            value="<%=data.watchonline%>"
+            placeholder="Watch online"
+            required />
+       </div>
+
+       
+
+
+       <div class="form-group">
+            <label>link 480p</label>
+            <input type="text" name="link4"
+            value="<%=data.link4%>"
+            class="form-control" placeholder="link 480p" required />
+       </div>
+
+
+       <div class="form-group">
+           <label>Link 720p</label>
+             <input type="text" name="link7" 
+             value="<%=data.link7%>"
+               class="form-control" placeholder="Link 720p" required />
+       </div>
+
+
+        <div class="form-group">
+          <button type="submit"
+          class="btn btn-outline-primary">Submit</button>
+        </div>
+        <% }; %>
+    </form>
+</div>
+</body>
+</html>

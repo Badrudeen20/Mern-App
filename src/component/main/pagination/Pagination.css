@@ -1,0 +1,35 @@
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-weight: 500;
+    font-size: 15px;
+  }
+  
+  .pagination-container a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    height: 40px;
+    width: 40px;
+    text-decoration: none;
+    transition: background-color .2s;
+    cursor: pointer;
+    border:none;
+    
+  }
+  
+  .pagination-container a.active {
+    background: #34495E;
+    color: white;
+    border-radius: 50%;
+  }
+  
+  .pagination-container a.disabled { 
+    opacity: 0.2;
+  }
+  /*
+  .pagination-container a:hover:not(.active) {background-color: rgb(238, 238, 238);}
+  */

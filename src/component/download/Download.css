@@ -1,0 +1,128 @@
+.main{
+    position: relative;
+    width: 100%;
+   
+}
+.main .download{
+   position: relative;
+   width: 100%;
+}
+
+.poster_cover{
+    position: relative;
+}
+.poster h2{
+     padding-bottom: 8px;
+     color: #fff;
+    text-align: center;
+}
+
+.poster{
+    position: relative;
+    padding-top: 20px;
+    width: 100%;
+}
+
+.poster img{
+     position: relative;
+     width:100%;
+}
+
+.imdb{
+     margin-top: 10px;
+     margin-bottom: 10px;
+}
+.download_btn{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     margin-top: 25px;
+}
+.download_btn a{
+    list-style: none;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    width: 160px;
+    margin-bottom: 10px;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+    border:2px solid #fff;
+    border-radius: 5px;
+}
+.torrent_link:hover{
+    background-color: #333;
+}
+.download_link:hover{
+    background-color: rgb(226, 24, 245);
+}
+.imdb strong{
+     color: #2C3E50;
+     font-family: 'Roboto';
+     font-size: 16px;
+}
+
+.imdb .data{
+     color:  #fff;
+     font-size: 15px;
+     font-family: 'Alef';
+     margin-left: 4px;
+}
+.movie_poster{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 0;
+      padding:0px 80px 10px 80px;
+}
+.download_sidebar{
+     padding-top: 30px;
+     padding-left:12px;
+     padding-right:12px;
+}
+
+.download_search{
+     position: relative;
+     width: 100%;
+     display: flex;
+     flex-wrap: wrap;
+     padding-bottom: 10px;
+     padding-left:12px;
+     margin-top: 30px;
+ }
+ .download_search input[type="text"]{
+     width: 200px;
+     height: 33px;
+     border:none;
+     margin-right: 5px;
+     border-radius: 3px;
+     padding-left: 10px;
+ }
+ .download_search button{
+     padding: 8px;
+     background-color:  #34495e;
+     color:  #f4f6f7;
+     border:none;
+     border-radius: 2px;
+     cursor: pointer;
+ }
+
+
+
+
+@media screen  and (min-width:670px){
+   .download{
+        display: flex;
+   }
+   
+}
+
+
+@media screen  and (min-width:870px){
+   
+     .movie_poster{
+         padding:0px 100px 10px 100px;
+     }
+  }

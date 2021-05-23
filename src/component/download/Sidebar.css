@@ -1,0 +1,50 @@
+.download_side{
+    position: relative;
+    width: 100%;
+     display: flex;
+     flex-direction: column;
+}
+
+@media only screen and (min-width:700px){
+    .download_side{
+        padding:0;
+        width: 200px;
+        margin-left: 15px;
+    }
+  
+}
+@media only screen and (min-width:1000px){
+    .download_side{
+     width:265px;
+    }
+  
+}
+
+.download_side .download_recent ul{
+    text-decoration: none;
+    list-style: none;
+    margin-bottom: 20px;
+    padding-left: 0px;
+}
+.download_side .download_recent ul li{
+    padding: 5px 0;
+}
+.download_side .download_recent ul  li a{
+    text-decoration: none;
+    font-weight: 600;
+    font-family: 'Alef';
+    font-size: 18px;
+    color: #fff;
+}
+.download_side .download_recent .download_rec_text{
+    color: #515a5a;
+    font-size: 25px;
+}
+.download_recent_post li{
+    display: flex;
+}
+
+.download_recent_post li img{
+    width: 50px;
+    margin-right: 10px;
+}

@@ -1,0 +1,128 @@
+.menu{
+    position: relative;
+    background: rgba( 0, 0, 0, 0.55 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 5.0px );
+    -webkit-backdrop-filter: blur( 5.0px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    padding: 10px;
+    margin-bottom: 10px;
+    z-index: 1000;
+}
+.menu .menu_link{ 
+    display: flex;
+    flex-wrap: wrap;
+   text-decoration: none;
+   list-style: none;
+}
+.menu_link .nav-link{
+    position: relative;
+}
+.menu .menu_link .nav-link .menu_li{
+    text-align: center;
+    font-weight: 600;
+    padding: 10px;
+}
+
+
+ .menu .menu_link .nav-link:hover .menu_li{
+    background: rgba( 99, 159, 235, 0.45 );
+    color:#fff;
+}
+.fa-caret-down{
+    margin-top: 2px;
+}
+
+.menu .menu_link .nav-link:hover > .menu_li  .fa-caret-down{
+   transform: rotate(180deg);
+   transition: 100ms;
+}
+
+.menu .menu_link .nav-link .menu_li{
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    word-spacing: 0px;
+   color:#fff;
+   border-radius: 5px;
+}
+
+
+
+.private{
+     display: none;
+}
+.fa-caret-down{
+    margin-left: 4px;
+}
+
+.drop_menu{
+    position:absolute;
+    text-decoration: none;
+    list-style:none;  
+    z-index: 1000;
+    display: none;
+}
+.drop_menu li{
+    display: flex;
+    align-items: center;
+    padding: 0px;
+    width: 220px;
+   
+}
+
+.drop_menu li a{
+  
+     width: 100%;
+     padding-left: 10px;
+     padding-top:10px;
+     padding-bottom: 10px;
+     text-decoration: none;
+     font-weight: 600;
+      color:#fff;
+      background-color: rgba( 99, 159, 235);
+}
+
+.drop_menu li a:hover{
+    background-color: rgba( 171, 178, 185);
+}
+
+.drop_menu li a.active{
+    background-color: rgb(18, 123, 228);
+}
+
+.menu_li.Action,.menu_li.Horror,.menu_li.Sci-Fi{
+    background: #5FA9F3;
+}
+
+.menu .menu_link .nav-link:hover .drop_menu{
+     display:block;
+}
+
+
+.menu_li.active{
+    background: #5FA9F3;
+    box-sizing: border-box;
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 5.5px );
+    -webkit-backdrop-filter: blur( 5.5px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    color:#fff;
+ }
+
+ 
+
+
+ .notify{
+     position: absolute;
+     background-color:#EC7063;
+     width: 16px;
+     height: 16px;
+     color: #fff;
+     text-align: center;
+     font-size: 11px;
+     border-radius: 100%;
+      right: 0;
+ }

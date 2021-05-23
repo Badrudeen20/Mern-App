@@ -1,0 +1,10 @@
+ul li .cover .text{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+ ul li .cover .text:hover{
+     color:seagreen;
+}

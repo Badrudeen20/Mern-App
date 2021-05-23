@@ -1,0 +1,39 @@
+
+.dp{
+     background-color:  #f08169 ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 53.33px;
+    text-align: center;
+    border-radius: 4px;
+    font-size: 26px;
+    margin-right: 20px;
+    height: 50px;
+    color: antiquewhite;
+ }
+.Not_Fount{
+     padding: 20px;
+     color:  #717d7e;
+     font-size: 17px;
+     font-family: 'Courier New', Courier, monospace;
+}
+.person{
+     background-color: #fff;
+}
+.del_comment{
+   position: absolute;
+   right: 10%;
+   border: none;
+   font-size: 25px;
+   background-color: none;
+   outline: none;
+   outline: none;
+   background-color: #fff;
+}
+.del_comment i{
+     cursor: pointer;
+}
+.request a{
+    font-size: 10px;
+ }

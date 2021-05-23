@@ -1,0 +1,234 @@
+import React, { Component } from 'react'
+import Axios from 'axios'
+import './Admin.css'
+
+export default class Uploads extends Component {
+    constructor(props){
+        super(props)
+        this.state={
+            loading:false,
+                 id:"",
+               name:"",
+              image:"",
+               size:"",
+                 mb:"",
+           category:"",
+             rating:"",
+             genres:"",
+           director:"",
+               cast:"",
+           language:"",
+            quality:"",
+              story:"",
+         screenshot:"",
+               link:""
+        }
+        
+   }
+
+  //handle form
+  handleInputs = (e)=>{
+    this.setState({
+        ...this.state,
+        [e.target.name]:e.target.value
+    })
+ }  
+
+//update
+upload = async (e)=>{
+    e.preventDefault()
+    const {id,name,image,size,mb,category,rating,genres,director,cast,language,quality,story,screenshot,link} = this.state
+  
+    if(name==="" || image===""||size==="" || mb ==="" || category==="" || rating==="" || 
+    genres==="" || director=== "" || cast==="" || language==="" || quality==="" || story==="" || 
+    screenshot==="" || link==="" ){
+     return alert('Fill all the filed!')
+    }   
+
+    Axios.post(`http://localhost:5000/postupload`,{
+       id:id,
+     name:name,
+    image:image,
+     size:size,
+       mb:mb,
+ category:category,
+   rating:rating,
+   genres:genres,
+ director:director,
+     cast:cast,
+ language:language,
+  quality:quality,
+    story:story, 
+screenshot:screenshot,
+     link:link,
+}).then(res =>{
+ this.props.history.push('/');
+}).catch(err =>{
+    console.log(err)
+})
+}
+
+
+    render() {
+        return (
+           <div className="container">
+            
+             <form method="POST">
+                 <h2>Upload Movie</h2>
+                 <div className="form-group">
+                    <label>Movie Name</label>
+                    <input type="text" name="name" 
+                    value={this.state.name}
+                    onChange={this.handleInputs}
+                   className="form-control" placeholder="Movie Name" required />
+                </div>
+
+
+                 <div className="form-group">
+                     <label>Movie Image</label>
+                     <input type="text" name="image" 
+                      value={this.state.image}
+                      onChange={this.handleInputs}
+                      className="form-control" placeholder="Movie Image" required />
+                </div>
+
+
+                <div className="form-group">
+                     <label>Movie Size</label>
+                     <input type="text" name="size"
+                     value={this.state.size}
+                     onChange={this.handleInputs}
+                     className="form-control" placeholder="Movie size" required />
+                </div>
+
+
+                <div className="form-group">
+                     <label>Movie MB</label>
+                     <input type="text" name="mb"
+                     value={this.state.mb}
+                     onChange={this.handleInputs}
+                     className="form-control" placeholder="Movie download Size in Mb" required />
+                </div>
+
+               
+
+                <div className="form-group">
+                    <label>Movie category</label>
+                    <select className="form-control" name="category" value={this.state.category}  onChange={this.handleInputs}>
+                      <option value="">--Please choose an option--</option>
+                      <option value="Bollywood">Bollywood</option>
+                      <option value="Hollywood">Hollywood</option>
+                      <option value="South Indian">South Indian</option>
+                      <option value="Dual Audio">Dual Audio</option>
+                      <option value="WEB series">WEB series</option>
+                      <option value="Animation">Animation</option>
+                      <option value="Pakistani Movie" >Pakistani Movie</option>
+                      <option value="Punjabi Movie">Punjabi Movie</option>
+                      <option value="TV show">TV show</option>
+                      <option value="Telugu" >Telugu</option>
+                   </select>
+                </div>
+
+                   
+                 <div className="form-group">
+                      <label>Movie rating</label>
+                      <input type="text" name="rating"
+                      value={this.state.rating}
+                      onChange={this.handleInputs}
+                     className="form-control" placeholder="Movie rating" required />
+                 </div>
+
+             
+                 <div className="form-group">
+                      <label>Movie Genres</label>
+                        <input type="text" name="genres"
+                        value={this.state.genres}
+                        onChange={this.handleInputs}
+                        className="form-control" placeholder="Movie Genres" required />
+                </div>
+
+
+                
+                <div className="form-group">
+                    <label>Movie Director</label>
+                      <input type="text" name="director"
+                        value={this.state.director}
+                        onChange={this.handleInputs}
+                        className="form-control" placeholder="Movie director" required />
+                </div>
+                 
+
+
+                
+                <div className="form-group">
+                    <label>Movie cast</label>
+                      <input type="text" name="cast"
+                        value={this.state.cast}
+                        onChange={this.handleInputs}
+                        className="form-control" placeholder="Movie cast" required />
+                </div>
+
+
+
+                
+                <div className="form-group">
+                    <label>Movie Language</label>
+                      <input type="text" name="language"
+                        value={this.state.language}
+                        onChange={this.handleInputs}
+                        className="form-control" placeholder="Movie language" required />
+                </div>
+
+                
+
+                
+                <div className="form-group">
+                    <label>Movie Quality</label>
+                      <input type="text" name="quality"
+                        value={this.state.quality}
+                        onChange={this.handleInputs}
+                        className="form-control" placeholder="Movie quality" required />
+                </div>
+    
+               
+
+                <div className="form-group">
+                    <label>Movie Story</label>
+                      <textarea type="text" name="story" rows="4" cols="50"
+                        value={this.state.story}
+                        onChange={this.handleInputs}
+                        className="form-control" placeholder="Movie story" required></textarea>
+                </div>
+
+          
+
+                <div className="form-group">
+                    <label>Movie Screemshot</label>
+                      <input type="text" name="screenshot" 
+                        value={this.state.screenshot}
+                        onChange={this.handleInputs}
+                        className="form-control" placeholder="Movie screenshot" required />
+                </div>
+
+
+
+                <div className="form-group">
+                    <label>Movie Download Link</label>
+                      <input type="text" name="link" 
+                        value={this.state.link}
+                        onChange={this.handleInputs}
+                        className="form-control" placeholder="Movie Download Link" required />
+                </div>
+
+
+                 <div className="form-group">
+                   <button type="submit"
+                   onClick={this.upload}
+                   className="btn btn-outline-primary">Submit</button>
+                 </div>
+                
+             </form>
+         </div>
+        )
+    }
+}

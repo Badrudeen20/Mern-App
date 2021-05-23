@@ -1,0 +1,36 @@
+.footer{
+    border-top:1px solid #fff;
+    padding-top: 2px;
+    padding-bottom: 10px;
+}
+.foot_link{
+    text-align: center;
+}
+.foot_link span{
+    margin-left: 4px;
+    margin-right: 4px;
+    color: #fff;
+}
+.foot_link span a{
+   font-size: 16px;
+   letter-spacing: 2px;
+   font-weight: bold;
+   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.foot_link span a,.foot_link p a{
+    text-decoration: none;
+    color: #fff;
+}
+.foot_link p a{
+    font-size: 12px;
+}
+.dmca,.about,.contact{
+    color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+    min-height: 50vh;
+    padding: 20px;
+}
+.contact p a{
+    color: #fff;
+}

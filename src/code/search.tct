@@ -1,0 +1,30 @@
+
+ /*
+<div className="main">
+                <div className="wrapper">
+                    <div className="content">
+                       <div className="post">
+                           <h3>Recent Video</h3>
+                       </div>
+                 
+                       <div className="archive">
+                      <ul>
+                        {search &&   
+                          search.data.name.map(item=>(
+                            <>
+                            {item.name.toLowerCase().
+                            includes(search.data.movie.toLowerCase()) ? <Item movie={item} />:""}
+                            </>
+                            ))
+                         }
+                      </ul>
+                      </div> 
+
+                    </div>
+                  
+                </div>
+            </div>
+
+            
+
+ */
